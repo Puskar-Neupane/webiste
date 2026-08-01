@@ -6,7 +6,7 @@ permalink: /publication/2024-power-loss-prediction
 excerpt: 'Develops a deep learning framework operating in the frequency domain to improve prediction accuracy of magnetic core losses across different magnetic materials.'
 date: 2024-01-01
 venue: 'IET Power Electronics'
-paperurl: ''
+paperurl: 'https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/pel2.12704'
 citation: 'Sapkota, D. B., Neupane, P., Joshi, M., & Khan, S. (2024). "Deep Learning Model for Enhanced Power Loss Prediction in the Frequency Domain for Magnetic Materials." <i>IET Power Electronics</i>.'
 ---
 
