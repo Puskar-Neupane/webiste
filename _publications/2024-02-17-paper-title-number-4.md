@@ -6,7 +6,7 @@ permalink: /publication/2025-voc-isolated-microgrid
 excerpt: 'A virtual oscillator control framework for parallel-operated inverters in isolated microgrids, enabling stable frequency synchronization, voltage regulation, and power sharing under varying load conditions.'
 date: 2025-01-01
 venue: 'KEC Journal of Science and Engineering'
-paperurl: ''
+paperurl: 'https://nepjol.info/index.php/kjse/article/view/78391'
 citation: 'Neupane, P., Sapkota, D. B., Shiwakoti, B., Baral, S., & Tamrakar, I. (2025). &quot;Virtual Oscillator Control Strategy for Parallel Operated Inverter in an Isolated Microgrid.&quot; <i>KEC Journal of Science and Engineering</i>.'
 ---
 
