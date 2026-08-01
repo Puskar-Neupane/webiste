@@ -16,7 +16,7 @@ Research Interests
 
 - Steady State analysis of Power System
 - Operation and Planning
-- Electricity Market
+- Optimization and Control
 
 {% comment %}
 Getting started
