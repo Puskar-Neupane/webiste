@@ -6,7 +6,7 @@ permalink: /publication/2024-harmonic-prediction
 excerpt: 'Introduces an artificial neural network approach for predicting harmonic components in power distribution systems to support improved power quality analysis.'
 date: 2024-01-01
 venue: 'Energy Reports'
-paperurl: ''
+paperurl: 'https://www.sciencedirect.com/science/article/pii/S2352484724006383'
 citation: 'Sapkota, D. B., Neupane, P., Pokharel, K., & Khan, S. (2024). "An Artificial Neural Network Based Approach for Harmonic Component Prediction in a Distribution Line." <i>Energy Reports</i>, 12, 3861–3873.'
 ---
 
