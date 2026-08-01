@@ -3,7 +3,7 @@ title: "A Cycle-Based Solvability Condition for Real Power Flow Equations"
 collection: publications
 category: manuscripts
 permalink: /publication/2024-magnet-challenge
-excerpt: 'Presents benchmark datasets, methodologies, and community-driven advances in data-driven modeling of power magnetics through the MagNet Challenge.'
+excerpt: 'Presents sufficient solvability condition for the existence of power flow solution in lossless case'
 date: 2026-07-03
 venue: 'IEEE Control Systems Letters'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/11594878'
