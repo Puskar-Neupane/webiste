@@ -14,7 +14,7 @@ I am a Ph.D. student in Electrical Engineering at Iowa State University working 
 Research Interests
 ======
 
-- Steady State analysis of Power System
+- Steady State Stability Analysis of Power Systems
 - Operation and Planning
 - Optimization and Control
 
