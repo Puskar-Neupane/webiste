@@ -1,6 +1,6 @@
 ---
 permalink: /markdown/
-title: "Markdown"
+title: "US States visited so far"
 author_profile: true
 redirect_from: 
   - /md/
