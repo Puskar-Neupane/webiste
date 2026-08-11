@@ -345,6 +345,11 @@ body.dark .utl-state,
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  width: 100%;
+}
+
+.utl-photo-gallery.single-photo {
+  grid-template-columns: 1fr;
 }
 
 .utl-photo-gallery .utl-entry-photo {
@@ -353,14 +358,8 @@ body.dark .utl-state,
   object-fit: cover;
 }
 
-@media (max-width: 700px) {
-  .utl-photo-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .utl-photo-gallery .utl-entry-photo {
-    height: 280px;
-  }
+.utl-photo-gallery.single-photo .utl-entry-photo {
+  height: 330px;
 }
    
 .utl-entry > div {
@@ -738,10 +737,18 @@ const travelData = {
   }
 
   function entryTemplate(entry) {
-  const photos = Array.isArray(entry.photos) && entry.photos.length
+  let photoList = [];
+
+if (Array.isArray(entry.photos) && entry.photos.length) {
+  photoList = entry.photos;
+} else if (entry.photo) {
+  photoList = [entry.photo];
+}
+
+const photos = photoList.length
   ? `
-    <div class="utl-photo-gallery">
-      ${entry.photos.map((photo, index) => `
+    <div class="utl-photo-gallery ${photoList.length === 1 ? "single-photo" : ""}">
+      ${photoList.map((photo, index) => `
         <img class="utl-entry-photo"
              src="${escapeAttr(photo)}"
              alt="${escapeAttr((entry.place || "Travel") + " photo " + (index + 1))}"
@@ -750,7 +757,7 @@ const travelData = {
     </div>
   `
   : `<div class="utl-entry-photo is-placeholder">trip</div>`;
-
+     
     return `
       <div class="utl-entry">
         ${photos}
