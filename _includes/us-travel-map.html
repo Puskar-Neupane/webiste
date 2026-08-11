@@ -341,7 +341,28 @@ body.dark .utl-state,
   }
 }
 
+.utl-photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
 
+.utl-photo-gallery .utl-entry-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .utl-photo-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .utl-photo-gallery .utl-entry-photo {
+    height: 280px;
+  }
+}
+   
 .utl-entry > div {
   color: var(--ink);
 }
@@ -717,16 +738,22 @@ const travelData = {
   }
 
   function entryTemplate(entry) {
-    const photo = entry.photo
-      ? `<img class="utl-entry-photo"
-              src="${escapeAttr(entry.photo)}"
-              alt="${escapeAttr(entry.place || "Travel photo")}"
-              loading="lazy" />`
-      : `<div class="utl-entry-photo is-placeholder">trip</div>`;
+  const photos = Array.isArray(entry.photos) && entry.photos.length
+  ? `
+    <div class="utl-photo-gallery">
+      ${entry.photos.map((photo, index) => `
+        <img class="utl-entry-photo"
+             src="${escapeAttr(photo)}"
+             alt="${escapeAttr((entry.place || "Travel") + " photo " + (index + 1))}"
+             loading="lazy" />
+      `).join("")}
+    </div>
+  `
+  : `<div class="utl-entry-photo is-placeholder">trip</div>`;
 
     return `
       <div class="utl-entry">
-        ${photo}
+        ${photos}
         <div>
           <div class="utl-entry-date">${escapeHtml(entry.date || "")}</div>
           ${entry.place
